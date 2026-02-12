@@ -50,7 +50,6 @@ body {
 }
 
 .nav-links a:hover { color: var(--accent-yellow); }
-
 /* Hero Section with Slider Transition */
 .hero-section {
     height: 75vh;
@@ -63,7 +62,6 @@ body {
     text-align: center;
     transition: background-image 1s ease-in-out; /* Smooth slide change */
 }
-
 .hero-content {
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
@@ -72,40 +70,151 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     max-width: 850px;
 }
-
-.hero-section h1 { font-family: 'Zalando Sans Expanded', sans-serif; font-size: 4.5rem; }
-
+.hero-section h1 {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 4.5rem;
+}
 /* Grid logic for tiles */
-.content-wrapper { padding: 80px 8%; } 
-.team-group { margin-bottom: 80px; }
-.group-title { font-family: 'Zalando Sans Expanded', sans-serif; margin-bottom: 40px; font-size: 1.8rem; text-align: center; border-bottom: 1px solid #222; padding-bottom: 10px; }
-
-.management-flex { display: flex; justify-content: center; gap: 25px; margin-bottom: 40px; }
-.management-flex .staff-card { flex: 1; max-width: 600px; }
-
-.staff-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 25px; width: 100%; }
-.staff-card { background: var(--card-bg); border-radius: 20px; padding: 40px 20px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.03); transition: 0.4s ease; grid-column: span 4; width: 100%; }
-.staff-grid .staff-card:last-child:nth-child(7) { grid-column: 5 / span 4; } /* Centers the 7th tile */
-
-.staff-card:hover { transform: translateY(-10px); border-color: var(--accent-yellow); }
-.avatar-box { width: 100px; height: 100px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; background: #222; }
-.user-pfp { width: 100%; height: 100%; object-fit: cover; }
-.role { color: var(--accent-yellow); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
-
+.content-wrapper {
+    padding: 80px 8%;
+}
+.team-group {
+    margin-bottom: 80px;
+}
+.group-title {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 1px solid #222;
+    padding-bottom: 10px;
+}
+.management-flex {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+.management-flex .staff-card {
+    flex: 1;
+    max-width: 600px;
+}
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 25px;
+    width: 100%;
+}
+.staff-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: 0.4s ease;
+    grid-column: span 4;
+    width: 100%;
+}
+.staff-grid .staff-card:last-child:nth-child(7) {
+    grid-column: 5 / span 4;
+} /* Centers the 7th tile */
+.staff-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-yellow);
+}
+.avatar-box {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #222;
+}
+.user-pfp {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.role {
+    color: var(--accent-yellow);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
 /* Dashboard Number */
-.growth-stats h2 { font-family: 'Zalando Sans Expanded', sans-serif; font-size: 5rem; color: var(--accent-yellow); line-height: 1; text-shadow: 0 0 20px rgba(255, 193, 7, 0.3);margin-top: 20px; }
-
+.growth-stats h2 {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 5rem;
+    color: var(--accent-yellow);
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+    margin-top: 20px;
+}
 /* Partners Marquee */
-.marquee-container { overflow: hidden; background: var(--card-bg); padding: 30px 0; border-radius: 20px; border: 1px solid #222; }
-.marquee-content { display: flex; gap: 60px; animation: scroll 30s linear infinite; width: max-content; }
-@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-.partner-item { color: var(--accent-yellow); font-family: 'Zalando Sans Expanded', sans-serif; font-size: 1.5rem; text-decoration: none; }
-
+.marquee-container {
+    overflow: hidden;
+    background: var(--card-bg);
+    padding: 30px 0;
+    border-radius: 20px;
+    border: 1px solid #222;
+}
+.marquee-content {
+    display: flex;
+    gap: 60px;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+.partner-item {
+    color: var(--accent-yellow);
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
 /* FAQ Dropdowns */
-.faq-container { max-width: 850px; margin: 0 auto; }
-.faq-item { border-bottom: 1px solid #222; overflow: hidden; }
-.faq-question { width: 100%; background: none; border: none; color: white; padding: 25px; display: flex; justify-content: space-between; cursor: pointer; font-size: 1.2rem; font-family: 'Cal Sans'; }
-.faq-answer { max-height: 0; transition: max-height 0.4s ease; padding: 0 25px; color: var(--text-muted); }
-.faq-item.active .faq-answer { max-height: 200px; padding-bottom: 25px; }
-
-@media (max-width: 1100px) { .staff-grid { grid-template-columns: repeat(2, 1fr); } .staff-card { grid-column: span 1; } }
+.faq-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+.faq-item {
+    border-bottom: 1px solid #222;
+    overflow: hidden;
+}
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: 'Cal Sans';
+}
+.faq-answer {
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    padding: 0 25px;
+    color: var(--text-muted);
+}
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-bottom: 25px;
+}
+/* Responsive Adjustments */
+@media (max-width: 1100px) {
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .staff-card {
+        grid-column: span 1;
+    }
+}
